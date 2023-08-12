@@ -30,7 +30,7 @@ for index, j in df.iterrows():
     msg['To'] = j['Email']  
     msg['Subject'] = 'Certificate'
     
-    body = "Dear {},\n\nPlease find attached your certificate.\n\nBest regards,\nTeam SARK".format(j['Name'])
+    body = "Dear {},\n\nGreetings from Team Sark,\nThank you for participating in Capture The Flag 2023\n\nPlease find the participation certificate attached with this mail.\nTeam Sark wishes you the best of luck for your future.\nHope to see you again.\n\nBest regards,\nTeam SARK".format(j['Name'])
     msg.attach(MIMEText(body, 'plain'))
     
     img_data = open(certificate_filename, 'rb').read()
